@@ -14,6 +14,7 @@
 		52C6D43A2638F22100D87B65 /* PingBus_Passenger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52C6D4382638F22100D87B65 /* PingBus_Passenger.xcdatamodeld */; };
 		52C6D43C2638F22200D87B65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C6D43B2638F22200D87B65 /* Assets.xcassets */; };
 		52C6D43F2638F22200D87B65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C6D43D2638F22200D87B65 /* LaunchScreen.storyboard */; };
+		52C6D44E2638F66700D87B65 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C6D44D2638F66700D87B65 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		52C6D43B2638F22200D87B65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52C6D43E2638F22200D87B65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52C6D4402638F22200D87B65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52C6D44B2638F65100D87B65 /* PingBus-Passenger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PingBus-Passenger.entitlements"; sourceTree = "<group>"; };
+		52C6D44D2638F66700D87B65 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C6D44E2638F66700D87B65 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +48,7 @@
 			children = (
 				52C6D42E2638F22100D87B65 /* PingBus-Passenger */,
 				52C6D42D2638F22100D87B65 /* Products */,
+				52C6D44C2638F66700D87B65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +63,57 @@
 		52C6D42E2638F22100D87B65 /* PingBus-Passenger */ = {
 			isa = PBXGroup;
 			children = (
+				52C6D44B2638F65100D87B65 /* PingBus-Passenger.entitlements */,
+				52C6D44A2638F39B00D87B65 /* coredata */,
+				52C6D4492638F36B00D87B65 /* controller */,
+				52C6D4482638F36600D87B65 /* view */,
+				52C6D4472638F34500D87B65 /* model */,
 				52C6D42F2638F22100D87B65 /* AppDelegate.swift */,
 				52C6D4312638F22100D87B65 /* SceneDelegate.swift */,
-				52C6D4332638F22100D87B65 /* ViewController.swift */,
-				52C6D4352638F22100D87B65 /* Main.storyboard */,
 				52C6D43B2638F22200D87B65 /* Assets.xcassets */,
 				52C6D43D2638F22200D87B65 /* LaunchScreen.storyboard */,
 				52C6D4402638F22200D87B65 /* Info.plist */,
-				52C6D4382638F22100D87B65 /* PingBus_Passenger.xcdatamodeld */,
 			);
 			path = "PingBus-Passenger";
+			sourceTree = "<group>";
+		};
+		52C6D4472638F34500D87B65 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		52C6D4482638F36600D87B65 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				52C6D4352638F22100D87B65 /* Main.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		52C6D4492638F36B00D87B65 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				52C6D4332638F22100D87B65 /* ViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		52C6D44A2638F39B00D87B65 /* coredata */ = {
+			isa = PBXGroup;
+			children = (
+				52C6D4382638F22100D87B65 /* PingBus_Passenger.xcdatamodeld */,
+			);
+			path = coredata;
+			sourceTree = "<group>";
+		};
+		52C6D44C2638F66700D87B65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52C6D44D2638F66700D87B65 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "PingBus-Passenger/PingBus-Passenger.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T4NVTRVW5X;
 				INFOPLIST_FILE = "PingBus-Passenger/Info.plist";
@@ -309,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "PingBus-Passenger/PingBus-Passenger.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T4NVTRVW5X;
 				INFOPLIST_FILE = "PingBus-Passenger/Info.plist";
